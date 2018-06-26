@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="chip_padding">12dp</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="divider_layout_margin">10dp</dimen>
+    <dimen name="divider_layout_height">1dp</dimen>
+    <dimen name="cover_image_height">300dp</dimen>
+</resources>

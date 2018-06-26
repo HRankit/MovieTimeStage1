@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MovieTime</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="tagline">Tagline:</string>
+    <string name="revenue">Revenue:</string>
+    <string name="imdb">IMDB:</string>
+    <string name="budget">Budget:</string>
+    <string name="overview">Overview:</string>
+    <string name="_7_6">7.6</string>
+    <string name="user_rating">User Rating:</string>
+    <string name="_2017_02_03">2017–02–03</string>
+    <string name="no_internet_warning">No Working Internet Connection Detected. \nPlease connect to Internet and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_image">No Internet Image</string>
+    <string name="click_here">Click Here</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="votes_label">Votes:</string>
+    <string name="runtime_label">Runtime:</string>
+    <string name="homepage_url">Homepage url</string>
+    <string name="website">Website:</string>
+    <string name="movie_poster_shown_here">Movie Poster Shown Here</string>
+    <string name="movie_name_comes_here">Movie Name COmes Here</string>
+    <string name="movie_cover_image">Movie Cover Image</string>
+    <string name="release_placeholder_text">Release Date:</string>
+    <string name="user_rating_placeholder_text">User Rating:</string>
+    <string name="movietitle_placeholder_text">MovieTitle</string>
+    <string name="movie_poster_content_description">Movie Poster</string>
+    <string name="cover_image_content_description">Cover Poster of Movie</string>
+
+</resources>
