@@ -15,6 +15,7 @@ import android.support.v7.widget.GridLayoutManager;
 
 import android.support.v7.widget.RecyclerView;
 
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -67,12 +68,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (checkIfApiKeyIsProvided()) {
+            Toast.makeText(this, R.string.no_api_key_Warning, Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+
         recyclerView = findViewById(R.id.recyclerView);
         no_network_image = findViewById(R.id.no_network_image);
         no_network_tv = findViewById(R.id.no_network_tv);
         retry_button = findViewById(R.id.retry_button);
 
+
         checkNet();
+
+    }
+
+    private boolean checkIfApiKeyIsProvided() {
+        String api_key = BuildConfig.API_KEY;
+        if (!TextUtils.isEmpty(api_key) && !api_key.contains("YOUR_TMDB_API_KEY")) {
+            return false;
+        }
+        return true;
+
 
     }
 

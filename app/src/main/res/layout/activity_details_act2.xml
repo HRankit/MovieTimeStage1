@@ -12,13 +12,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
         android:ellipsize="end"
         android:gravity="right|end"
         android:maxLines="1"
         android:text="@string/_7_6"
         android:textColor="?attr/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/imdb_label" />
 
     <TextView
@@ -39,6 +43,7 @@
         android:contentDescription="@string/movie_cover_image"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/loader" />
@@ -63,7 +68,7 @@
 
     <ImageView
         android:id="@+id/movie_poster"
-        android:layout_width="180dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
@@ -71,6 +76,8 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/movie_poster_shown_here"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/user_rating_label"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coverImage"
         app:srcCompat="@drawable/loader" />
@@ -79,25 +86,30 @@
         android:id="@+id/user_rating_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+
         android:layout_marginStart="8dp"
+
         android:layout_marginTop="8dp"
-
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-
         android:textSize="16sp"
         app:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toEndOf="@+id/movie_poster"
-        app:layout_constraintTop_toTopOf="@+id/movie_poster" />
+        app:layout_constraintTop_toTopOf="@+id/movie_poster"
+        tools:text="User Rating" />
 
     <TextView
         android:id="@+id/release_date_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-
         android:textSize="16sp"
         app:fontFamily="sans-serif-smallcaps"
         app:layout_constraintStart_toStartOf="@+id/user_rating_label"
@@ -122,9 +134,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:autoLink="web"
+
         android:text="@string/imdb"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-
         android:textSize="16sp"
         app:fontFamily="sans-serif-smallcaps"
         app:layout_constraintStart_toStartOf="@+id/user_rating_label"
@@ -135,31 +147,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
+
+        android:layout_marginStart="8dp"
         android:ellipsize="end"
         android:gravity="right|end"
         android:maxLines="1"
-
         android:text="@string/_7_6"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/user_rating_label" />
 
     <TextView
         android:id="@+id/release_date_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeTextType="uniform"
         android:ellipsize="end"
         android:gravity="right|end"
         android:maxLines="1"
-
+        android:singleLine="true"
         android:text="@string/_2017_02_03"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="@+id/user_rating_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/release_date_label" />
 
     <TextView
@@ -167,15 +187,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
+
+        android:layout_marginStart="8dp"
+
         android:ellipsize="end"
         android:gravity="right|end"
         android:maxLines="1"
-
         android:textSize="16sp"
-
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/runtime_label2" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/runtime_label2"
+        tools:text="123min" />
 
     <View
         android:id="@+id/divider1"
@@ -453,7 +478,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="genre_chips_layout,revenue_tv,revenue_label,vote_count_tv,vote_count_label,tagline_tv,tagline_label,budget_tv,budget_label" />
+        app:constraint_referenced_ids="" />
+    <!--app:constraint_referenced_ids="genre_chips_layout,revenue_tv,revenue_label,vote_count_tv,vote_count_label,tagline_tv,tagline_label,budget_tv,budget_label" />-->
 
 
     <ProgressBar
@@ -474,5 +500,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
 
 </android.support.constraint.ConstraintLayout>

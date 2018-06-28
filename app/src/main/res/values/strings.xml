@@ -27,5 +27,6 @@
     <string name="movietitle_placeholder_text">MovieTitle</string>
     <string name="movie_poster_content_description">Movie Poster</string>
     <string name="cover_image_content_description">Cover Poster of Movie</string>
+    <string name="no_api_key_Warning">Please make sure you have API KEY placed in grade.properties</string>
 
 </resources>

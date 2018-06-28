@@ -26,6 +26,8 @@
             android:maxLines="1"
             android:text="@string/_7_6"
             android:textColor="?attr/colorAccent"
+
+            app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imdb_label" />
 
@@ -38,6 +40,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorHeadings"
             android:textSize="16sp"
+            app:autoSizeTextType="uniform"
 
             app:fontFamily="sans-serif-smallcaps"
             app:layout_constraintStart_toStartOf="@+id/user_rating_label"
@@ -48,13 +51,14 @@
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:adjustViewBounds="true"
-            android:scaleType="fitXY"
+            android:contentDescription="@string/cover_image_content_description"
 
+
+            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/loader"
-            android:contentDescription="@string/cover_image_content_description" />
+            app:srcCompat="@drawable/loader" />
 
         <TextView
             android:id="@+id/movie_title_tv"
@@ -89,7 +93,9 @@
             android:textColor="@color/colorHeadings"
 
             android:textSize="16sp"
+            app:autoSizeTextType="uniform"
             app:fontFamily="sans-serif-smallcaps"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toEndOf="@+id/movie_poster"
             app:layout_constraintTop_toTopOf="@+id/movie_poster" />
 
@@ -102,7 +108,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorHeadings"
             android:textSize="16sp"
-
+            app:autoSizeTextType="uniform"
             app:fontFamily="sans-serif-smallcaps"
             app:layout_constraintStart_toStartOf="@+id/user_rating_label"
             app:layout_constraintTop_toBottomOf="@+id/user_rating_label" />
@@ -118,6 +124,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorHeadings"
             android:textSize="16sp"
+            app:autoSizeTextType="uniform"
 
             app:fontFamily="sans-serif-smallcaps"
             app:layout_constraintStart_toStartOf="@+id/runtime_label2"
@@ -132,8 +139,9 @@
             android:ellipsize="end"
             android:gravity="right|end"
             android:maxLines="1"
-
             android:text="@string/_7_6"
+
+            app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/user_rating_label" />
 
@@ -147,6 +155,8 @@
             android:gravity="right|end"
             android:maxLines="1"
             android:text="@string/_2017_02_03"
+            app:autoSizeTextType="uniform"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.849"
             app:layout_constraintStart_toStartOf="@+id/user_rating_tv"
@@ -161,6 +171,7 @@
             android:ellipsize="end"
             android:gravity="right|end"
             android:maxLines="1"
+            app:autoSizeTextType="uniform"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/runtime_label2" />
@@ -337,7 +348,6 @@
             android:layout_marginLeft="@dimen/eight_dp"
             android:layout_marginStart="@dimen/eight_dp"
             android:layout_marginTop="@dimen/eight_dp"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vote_count_label" />
 
@@ -409,18 +419,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/homepage_label" />
 
-        <!--<ImageButton-->
-        <!--android:id="@+id/imageButton"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginLeft="24dp"-->
-        <!--android:layout_marginStart="24dp"-->
-        <!--android:layout_marginTop="24dp"-->
-        <!--android:background="#5f000000"-->
-        <!--android:onClick="pressBack"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:srcCompat="@drawable/ic_arrow_back_black_24dp" />-->
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -436,7 +434,7 @@
 
         <ImageView
             android:id="@+id/movie_poster"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:contentDescription="@string/movie_poster_content_description"
@@ -475,6 +473,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
